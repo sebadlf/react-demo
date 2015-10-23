@@ -1,6 +1,6 @@
 var React = require('react');
 
-module.exports = React.createClass ({
+var HelloComp = React.createClass ({
 
 	getInitialState: function() {
 		return {
@@ -8,9 +8,10 @@ module.exports = React.createClass ({
 		}
 	},
 	componentDidMount: function(){
-		setInterval(function(){ 
-			this.setState({
-				counter: this.state.counter + 1
+		var self = this;
+		setInterval(function(){
+			self.setState({
+				counter: self.state.counter + 1
 			});
 		}, 1000);
 
@@ -19,9 +20,11 @@ module.exports = React.createClass ({
 	render() {
 		return (
 			<div>
-				Hello World - 
+				Hello World -
 				{ this.state.counter }
 			</div>
 		);
 	}
 });
+
+module.exports = HelloComp;
