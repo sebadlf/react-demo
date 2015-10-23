@@ -13,6 +13,8 @@ module.exports = React.createClass ({
 				counter: this.state.counter + 1
 			});
 		}, 1000);
+
+		console.log('mounted');
 	},
 	render() {
 		return (

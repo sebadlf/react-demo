@@ -13,5 +13,8 @@
     "express-handlebars": "^2.0.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.4.0"
   }
 }

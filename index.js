@@ -20,6 +20,7 @@ var factory = React.createFactory(MyComponent);
  
 var comp = ReactDOMServer.renderToString(factory());
 
+app.use(express.static('build'));
 
 app.get('/', function (req, res) {
     res.render('home', {
